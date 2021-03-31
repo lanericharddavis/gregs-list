@@ -18,34 +18,34 @@ function _draw() {
 //Public
 export default class HousesController {
   constructor() {
-    ProxyState.on("houses", _draw)
+    ProxyState.on("houses", _draw);
+    _draw()
   }
-  _draw()
-}
 
-createHouse() {
-  window.event.preventDefault()
-  const form = window.event.target
-  let newHouse = {
-    bed: form.bed.value,
-    bath: form.bath.value,
-    sqft: form.sqft.value,
-    address: form.address.value,
-    price: Number(form.price.value),
-    imgUrl: form.imgUrl.value
+
+  createHouse() {
+    window.event.preventDefault()
+    const form = window.event.target
+    let newHouse = {
+      bed: form.bed.value,
+      bath: form.bath.value,
+      sqft: form.sqft.value,
+      address: form.address.value,
+      price: Number(form.price.value),
+      imgUrl: form.imgUrl.value
+    }
+    housesService.createHouse(newHouse)
+    form.reset()
+    $('#new-house-form').modal('hide')
   }
-  housesService.createHouse(newHouse)
-  form.reset();
-  $('#new-house-form').modal('hide')
-}
 
-bidHouse(id) {
-  housesService.bidHouse(id)
-}
+  bidHouse(id) {
+    housesService.bidHouse(id)
+  }
 
-deleteHouse(id) {
-  housesService.deleteHouse(id)
+  deleteHouse(id) {
+    housesService.deleteHouse(id)
+  }
 }
-
 
 

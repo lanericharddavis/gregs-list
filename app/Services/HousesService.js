@@ -8,16 +8,16 @@ class HousesService {
     ProxyState.houses = [...ProxyState.houses, house]
   }
 
-  bidHouse() {
+  bidHouse(id) {
     let house = ProxyState.houses.find(house => house.id === id)
     house.price += 1000
     ProxyState.houses = ProxyState.houses
   }
 
-  deleteHouse() {
+  deleteHouse(id) {
     let house = ProxyState.houses.find(house => house.id != id)
   }
 
 }
 
-export const housesService = new HousesService()
+export const housesService = new HousesService();
