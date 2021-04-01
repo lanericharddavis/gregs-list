@@ -1,5 +1,6 @@
 import Car from "./Models/Car.js"
 import House from "./Models/House.js"
+import Job from "./Models/Job.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
 
@@ -18,6 +19,14 @@ class AppState extends EventEmitter {
     new House(2, 2, 1150, "189 W. Lost Pointe, Ketchikan, AK 99901", 399000, "https://photos.zillowstatic.com/fp/d07c149676f6c6d53816f8ff9d6c6b0b-p_h.jpg"),
     new House(4, 2, 2250, "54 E. Hidden Cove Rd, Ketchikan, AK 99901", 875000, "https://storage.googleapis.com/idx-photos-gs.ihouseprd.com/AK-JUNEAU/15641/org/000.jpg")
 
+  ]
+
+  /** @type {Job[]} */
+  jobs = [
+    new Job("Lawn Mower", "Lawn Mower Provided, need additional help!", 20, 10, "Little Lionel's Lawns"),
+    new Job("Tree Trimmer", "Must Not Be Afraid of Heights", 15, 40, "Trees-R-Us"),
+    new Job("Flavor Taste Tester", "You eat stuff and tell us what you think", 15, 40, "Bertie Botts"),
+    new Job("Piano Player", "Play classic music for fine dining establishment", 15, 40, "McDonalds")
   ]
 }
 
