@@ -4,7 +4,7 @@ import Job from "../Models/Job.js"
 
 class JobsService {
 
-  createJob() {
+  createJob(newJob) {
     let job = new Job(newJob.title, newJob.description, newJob.rate, newJob.hours, newJob.company)
     ProxyState.jobs = [...ProxyState.jobs, job]
   }
