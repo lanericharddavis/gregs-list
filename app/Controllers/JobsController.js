@@ -26,11 +26,11 @@ export default class JobsController {
     window.event.preventDefault()
     const form = window.event.target
     let newJob = {
-      title: form.title.value,
-      description: form.description.value,
-      rate: Number(form.rate.value),
-      hours: form.hours.value,
-      company: form.company.value
+      title: form[title].value,
+      description: form[description].value,
+      rate: Number(form[rate].value),
+      hours: form[hours].value,
+      company: form[company].value
     }
     jobsService.createJob(newJob)
     form.reset()

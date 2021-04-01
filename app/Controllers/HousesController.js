@@ -27,12 +27,12 @@ export default class HousesController {
     window.event.preventDefault()
     const form = window.event.target
     let newHouse = {
-      bed: form.bed.value,
-      bath: form.bath.value,
-      sqft: form.sqft.value,
-      address: form.address.value,
-      price: Number(form.price.value),
-      imgUrl: form.imgUrl.value
+      bed: form[bed].value,
+      bath: form[bath].value,
+      sqft: form[sqft].value,
+      address: form[address].value,
+      price: Number(form[price].value),
+      imgUrl: form[imgUrl].value
     }
     housesService.createHouse(newHouse)
     form.reset()

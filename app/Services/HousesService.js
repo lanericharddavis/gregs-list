@@ -15,7 +15,7 @@ class HousesService {
   }
 
   deleteHouse(id) {
-    let house = ProxyState.houses.find(house => house.id != id)
+    ProxyState.houses = ProxyState.houses.filter(house => house.id != id)
   }
 
 }

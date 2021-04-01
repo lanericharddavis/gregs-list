@@ -10,7 +10,7 @@ class JobsService {
   }
 
   deleteJob(id) {
-    ProxyState.jobs.filter(job => job.id != id)
+    ProxyState.jobs = ProxyState.jobs.filter(job => job.id != id)
   }
 
   applyJob(id) {
